@@ -1,0 +1,11 @@
+name: 'Compile Manuscript Action'
+description: 'GitHub Action for compiling a manuscript using Inkwell'
+inputs:
+  filename:
+    description: Inkwell configuration file
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.filename }}
